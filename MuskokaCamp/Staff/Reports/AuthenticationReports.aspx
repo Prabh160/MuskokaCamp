@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="MuskokaCamp.Staff.Registration.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AuthenticationReports.aspx.cs" Inherits="MuskokaCamp.Staff.Reports.AuthenticationReports" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
     <div class="header clearfix">
@@ -23,22 +23,22 @@
     <div class="col-md-offset-1 col-md-10 content">
 
 
-        <div class="col-md-12">
-            <div class="col-md-6 "><span class="lblstrong">Registration</span></div>
+        <table class="col-md-12">
+            <th class="col-md-6 "><span class="lblstrong">Parent Sign IN/OUT Reports</span></th>
+        </table>
+
+        <!-- Default panel contents -->
+        <div class="col-md-12 nopadd table-header">
+            <div class="nopadd table-item text-center">SELECT A DATE FOR REPORT</div>
 
         </div>
 
-        <!-- Default panel contents -->
-        <table class="col-md-12 table-header">
-            <th class="table-item input-name">SELECT A DATE TO REGISTER CAMPERS</th>
-
-        </table>
-
         <div class="col-md-12 camper-item">
 
-            <div class="yacal" data-date="2017/3/02" data-near-months="1" data-min-date="2017/1/1" data-max-date="2021/12/31"></div>
+            <div class="yacal" data-date="2020/10/26" data-near-months="1" data-min-date="2020/4/17" data-max-date="2021/8/24"></div>
         </div>
 
     </div>
 </div>
+
 </asp:Content>

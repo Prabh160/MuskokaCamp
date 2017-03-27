@@ -239,8 +239,12 @@
     <Content Include="Staff\Campers\Index.aspx" />
     <Content Include="Staff\Campers\SelectedProfile.aspx" />
     <Content Include="Staff\Payments\Index.aspx" />
+    <Content Include="Staff\Payments\Pay.aspx" />
     <Content Include="Staff\Registration\Index.aspx" />
+    <Content Include="Staff\Reports\AuthenticationReports.aspx" />
+    <Content Include="Staff\Reports\DailyCamperSheets.aspx" />
     <Content Include="Staff\Reports\Index.aspx" />
+    <Content Include="Staff\Reports\Stats.aspx" />
     <Content Include="Staff\StaffDashboard.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -448,6 +452,13 @@
     <Compile Include="Staff\Payments\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Staff\Payments\Pay.aspx.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Payments\Pay.aspx.designer.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Staff\Registration\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -455,12 +466,33 @@
     <Compile Include="Staff\Registration\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Staff\Reports\AuthenticationReports.aspx.cs">
+      <DependentUpon>AuthenticationReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Reports\AuthenticationReports.aspx.designer.cs">
+      <DependentUpon>AuthenticationReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Reports\DailyCamperSheets.aspx.cs">
+      <DependentUpon>DailyCamperSheets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Reports\DailyCamperSheets.aspx.designer.cs">
+      <DependentUpon>DailyCamperSheets.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Staff\Reports\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Staff\Reports\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Reports\Stats.aspx.cs">
+      <DependentUpon>Stats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Reports\Stats.aspx.designer.cs">
+      <DependentUpon>Stats.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\StaffDashboard.aspx.cs">
       <DependentUpon>StaffDashboard.aspx</DependentUpon>
