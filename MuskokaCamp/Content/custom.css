@@ -94,7 +94,7 @@ input{
 .input-name{
 	text-align: center;
 }
-.row-highlight:hover{
+.row-highlight{
 	border-top: 2px solid #134d74;
 	border-bottom: 2px solid #134d74;
 	background-color: #d4dee2;

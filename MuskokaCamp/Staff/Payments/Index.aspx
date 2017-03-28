@@ -27,44 +27,13 @@
 
         </div>
 
-
-        <!-- Table -->
-        <table class="table">
- 
-                <th class="col-md-4 table-item table-header">FAMILY NAME</th>
-                <th class="col-md-4 table-item table-header">CAMPERS</th>
-           
-                <tr>
-                    <td>Archer</td>
-                    <td>Becky</td>
-                </tr>
-
-                <tr>
-                    <td>Becky</td>
-                    <td>Maggie & Rachel</td>
-                </tr>
-
-
-                <tr class="row-highlight">
-                    <td><a href="Pay.aspx" class="staff-nav"> Cameron</a></td>
-                    <td>Michael & Mathew</td>
-                </tr>
-
-                <tr>
-                    <td>Edwards</td>
-                    <td>John</td>
-                </tr>
-
-                <tr>
-                    <td>Smith</td>
-                    <td>Jayden & Brock</td>
-                </tr>
-
-                <tr>
-                    <td>Turner</td>
-                    <td>Carter</td>
-                </tr>
-</table>
+         <asp:GridView ID="grdCampers" runat="server" cssClass="table table-bordered row-highlight" autogeneratecolumns="false" DataKeyNames="camperID"> 
+                        <Columns>
+                            <asp:BoundField DataField="camperID" HeaderText="ID" Visible="false" />
+                            <asp:BoundField DataField="familyName" HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
+                            <asp:BoundField DataField="firstName"  HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
+                         </Columns>
+                </asp:GridView>
 
     </div>
 </div>
