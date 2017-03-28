@@ -22,14 +22,6 @@
 
     <div class="col-md-12 content">
 
-        <div class="col-md-12">
-            <div class="col-md-8"><span class="lblstrong input-border">FAMILY NAME</span></div>
-            <div class="col-md-2"><span class="lblstrong pull-right input-border">CAMPER</span></div>
-            <div class="col-md-1"><span class="lblstrong pull-right input-border">+ADD</span></div>
-
-        </div>
-
-
         <!-- Default panel contents -->
         <!--Table Form-->
         <form runat="server" method="post">
@@ -40,17 +32,17 @@
                     <td class="col-md-4 table-header table-item input-name">LAST NAME</td>
                     <td rowspan="5" class="col-md-3">
                         <div class="profile-photo-icon">
-                            <img src="../../images/create-profile-icon.png" alt="profile photo icon" height="220" width="200">
+                            <asp:FileUpload ID="photo" name="photo" runat="server" />
                         </div>
                     </td>
                 </tr>
 
                 <tr>
                     <td class="input-name">
-                        <input type="text" placeholder="First Name Here" name="firstName" id="fName" class="table-item">
+                        <asp:TextBox runat="server" placeholder="First Name Here" name="firstName" id="firstName" class="table-item"></asp:TextBox>
                     </td>
                     <td class="input-name">
-                        <input type="text" placeholder="Last Name Here" name="lastName" id="lName" class="table-item">
+                        <asp:TextBox runat="server" placeholder="Last Name Here" name="lastName" id="lastName" class="table-item"></asp:TextBox>
                     </td>
                 </tr>
 
@@ -61,10 +53,24 @@
 
                 <tr>
                     <td class="input-name">
-                        <input type="text" placeholder="$00.00" name="rate" id="rate" class="table-item">
+                        <asp:TextBox runat="server" placeholder="$00.00" name="rate" id="rate" class="table-item"></asp:TextBox>
                     </td>
                     <td class="input-name">
-                        <input type="text" placeholder="Main Address Here" name="address" id="address" class="table-item">
+                        <asp:TextBox runat="server" placeholder="Main Address Here" name="address" id="address" class="table-item"></asp:TextBox>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="table-header table-item input-name">FAMILY NAME</td>
+                    <td class="table-header table-item input-name">AGE</td>
+                </tr>
+
+                <tr>
+                    <td class="input-name">
+                        <asp:TextBox runat="server" placeholder="Enter your family name" name="familyName" id="familyName" class="table-item"></asp:TextBox>
+                    </td>
+                    <td class="input-name">
+                        <asp:TextBox runat="server" placeholder="Enter camper's age" name="age" id="age" class="table-item"></asp:TextBox>
                     </td>
                 </tr>
 
@@ -80,7 +86,7 @@
                         <label>Name:</label>
                     </td>
                     <td class="table-item">
-                        <input type="text" placeholder="Contact Name">
+                        <asp:TextBox runat="server" ID="contactName" placeholder="Contact Name"></asp:TextBox>
                     </td>
                 </tr>
 
@@ -89,7 +95,7 @@
                         <label>Relationship:</label>
                     </td>
                     <td class="table-item">
-                        <input type="text" placeholder="Relation to Camper">
+                        <asp:TextBox runat="server" ID="contactRelation" placeholder="Relation to Camper"></asp:TextBox>
                     </td>
                 </tr>
 
@@ -98,7 +104,7 @@
                         <label>Phone:</label>
                     </td>
                     <td class="table-item">
-                        <input type="tel" placeholder="123-456-789">
+                        <asp:TextBox type="tel" ID="contactNumber" runat="server" placeholder="123-456-789"></asp:TextBox>
                     </td>
                 </tr>
             </table>
@@ -110,8 +116,8 @@
                 </tr>
 
                 <tr>
-                    <td>
-                        <textarea rows="4" class="table-item textarea col-md-12">Important notes, medical information and allergies here.</textarea>
+                    <td class="col-md-12">
+                        <asp:TextBox runat="server" ID="impNotes" placeholder="Write any important notes !" CssClass="table-item textarea wid-100 col-md-12"></asp:TextBox>
                     </td>
                 </tr>
 
@@ -120,22 +126,20 @@
                 </tr>
 
             </table>
-          
+         
+            <hr/>
 
-            <div class="col-md-12 camper-item">
-                <div class="col-md-6 yacal" data-date="2017/3/02"></div>
-                <div class="col-md-6 yacal" data-date="2017/4/22"></div>
-            </div>
-
-            <p class="table camper-item row">
-                <button class="btn btn-primary pull-right">Save Changes</button>
+            <p class="table row">
+                <asp:LinkButton runat="server" class="btn btn-primary pull-right" OnClick="Create_Click">Save Changes</asp:LinkButton>
             </p>
+
+            <hr />
 
         </form>
 
         <div class="col-md-12 back-btn-links">
-            <a href="/Campers/CamperProfile" class="btn btn-primary pull-left">Back to List of Profiles</a>
-            <a href="/Home/StaffDashboard" class="btn btn-primary pull-right">Back to Staff Home</a>
+            <a href="Index.aspx" class="btn btn-primary pull-left">Back to List of Profiles</a>
+            <a href="../Staff/StaffDashboard.aspx" class="btn btn-primary pull-right">Back to Staff Home</a>
         </div>
 
 

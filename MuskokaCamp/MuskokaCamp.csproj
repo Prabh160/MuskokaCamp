@@ -53,6 +53,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -181,6 +183,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <EntityDeploy Include="MuskokaEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MuskokaEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="MuskokaEntity.edmx.diagram">
+      <DependentUpon>MuskokaEntity.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\close-icon.PNG" />
     <Content Include="Images\create-profile-icon.png" />
@@ -199,6 +208,16 @@
     <Content Include="Images\profile.png" />
     <Content Include="Images\register-icon.PNG" />
     <Content Include="Images\report-icon.PNG" />
+    <Content Include="MuskokaEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MuskokaEntity.edmx</DependentUpon>
+      <LastGenOutput>MuskokaEntity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MuskokaEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MuskokaEntity.edmx</DependentUpon>
+      <LastGenOutput>MuskokaEntity.cs</LastGenOutput>
+    </Content>
     <Content Include="Parent\SignedIn.aspx" />
     <Content Include="Parent\SignIn.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -377,6 +396,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="camperProfile.cs">
+      <DependentUpon>MuskokaEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -395,6 +417,21 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="MuskokaEntity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MuskokaEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MuskokaEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MuskokaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MuskokaEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MuskokaEntity.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Parent\SignedIn.aspx.cs">
       <DependentUpon>SignedIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -409,7 +446,13 @@
     <Compile Include="Parent\SignIn.aspx.designer.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
     </Compile>
+    <Compile Include="payment.cs">
+      <DependentUpon>MuskokaEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registrationDate.cs">
+      <DependentUpon>MuskokaEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -512,6 +555,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

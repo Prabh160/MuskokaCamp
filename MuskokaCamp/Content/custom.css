@@ -94,7 +94,7 @@ input{
 .input-name{
 	text-align: center;
 }
-.row-highlight{
+.row-highlight:hover{
 	border-top: 2px solid #134d74;
 	border-bottom: 2px solid #134d74;
 	background-color: #d4dee2;
@@ -147,7 +147,7 @@ font-size: 22px;
 }
 .border-0{
 	    border-bottom: solid 1px #1f5481;
-    padding: 5px;
+        padding: 5px;
         border-radius: 0px;
 }
 .margin-15{
