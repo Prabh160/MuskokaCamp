@@ -28,17 +28,19 @@
 
         </div>
 
+        <form runat="server">
+
         <!-- Default panel contents -->
         <table class="col-md-12 table-header">
             <th class="table-item input-name">SELECT A DATE TO REGISTER CAMPERS</th>
 
         </table>
 
-        <div class="col-md-12 camper-item">
-
-            <div class="yacal" data-date="2017/3/02" data-near-months="1" data-min-date="2017/1/1" data-max-date="2021/12/31"></div>
-        </div>
-
+        <section class="col-md-12 content">
+            <asp:Calendar ID="registerationCalendar" CssClass="col-md-5 pull-left" runat="server"></asp:Calendar>
+            <asp:Calendar ID="registrationCalendar2" CssClass="col-md-5 pull-right" runat="server"></asp:Calendar>
+           </section>
+        </form>
     </div>
 </div>
 </asp:Content>

@@ -33,11 +33,12 @@
 
         </div>
 
-        <div class="col-md-12 camper-item">
-
-            <div class="yacal" data-date="2020/10/26" data-near-months="1" data-min-date="2020/4/17" data-max-date="2021/8/24"></div>
-        </div>
-
+        <form runat="server">
+        <section class="col-md-12 content">
+            <asp:Calendar ID="attendenceCalendar" CssClass="col-md-5 pull-left" runat="server"></asp:Calendar>
+            <asp:Calendar ID="attendenceCalendar2" CssClass="col-md-5 pull-right" runat="server"></asp:Calendar>
+           </section>
+        </form>
     </div>
 </div>
 </asp:Content>

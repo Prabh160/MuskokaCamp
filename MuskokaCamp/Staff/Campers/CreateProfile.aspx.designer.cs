@@ -13,15 +13,6 @@ namespace MuskokaCamp.Staff.Campers {
     public partial class CreateProfile {
         
         /// <summary>
-        /// photo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload photo;
-        
-        /// <summary>
         /// firstName control.
         /// </summary>
         /// <remarks>
@@ -110,5 +101,23 @@ namespace MuskokaCamp.Staff.Campers {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox impNotes;
+        
+        /// <summary>
+        /// registerationCalendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar registerationCalendar;
+        
+        /// <summary>
+        /// registrationCalendar2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar registrationCalendar2;
     }
 }

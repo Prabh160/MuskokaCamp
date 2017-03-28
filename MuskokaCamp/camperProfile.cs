@@ -18,13 +18,14 @@ namespace MuskokaCamp
         public camperProfile()
         {
             this.registrationDates = new HashSet<registrationDate>();
+            this.payments = new HashSet<payment>();
         }
     
         public int camperID { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string familyName { get; set; }
-        public Nullable<int> age { get; set; }
+        public int age { get; set; }
         public string rate { get; set; }
         public string address { get; set; }
         public string contactName { get; set; }
@@ -35,5 +36,7 @@ namespace MuskokaCamp
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<registrationDate> registrationDates { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<payment> payments { get; set; }
     }
 }

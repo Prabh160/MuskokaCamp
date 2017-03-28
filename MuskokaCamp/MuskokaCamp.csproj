@@ -176,7 +176,12 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.css" />
-    <Content Include="Content\jquery.yacal.css" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery-ui.structure.css" />
+    <Content Include="Content\jquery-ui.theme.css" />
+    <Content Include="Content\mdp.css" />
+    <Content Include="Content\pepper-ginder-custom.css" />
+    <Content Include="Content\prettify.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -224,8 +229,13 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\jquery.yacal.js" />
+    <Content Include="Scripts\jquery-1.11.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-ui-1.11.1.js" />
+    <Content Include="Scripts\jquery-ui.multidatespicker.js" />
+    <Content Include="Scripts\lang-css.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\prettify.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -256,7 +266,6 @@
     <Content Include="Site.Master" />
     <Content Include="Staff\Campers\CreateProfile.aspx" />
     <Content Include="Staff\Campers\Index.aspx" />
-    <Content Include="Staff\Campers\SelectedProfile.aspx" />
     <Content Include="Staff\Payments\Index.aspx" />
     <Content Include="Staff\Payments\Pay.aspx" />
     <Content Include="Staff\Registration\Index.aspx" />
@@ -266,7 +275,9 @@
     <Content Include="Staff\Reports\Stats.aspx" />
     <Content Include="Staff\StaffDashboard.aspx" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -480,13 +491,6 @@
     </Compile>
     <Compile Include="Staff\Campers\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Staff\Campers\SelectedProfile.aspx.cs">
-      <DependentUpon>SelectedProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Staff\Campers\SelectedProfile.aspx.designer.cs">
-      <DependentUpon>SelectedProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\Payments\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

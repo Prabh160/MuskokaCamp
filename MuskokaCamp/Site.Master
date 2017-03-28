@@ -13,17 +13,25 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="Content/custom.css" />
-    <link rel="stylesheet" type="text/css" href="Content/jquery.yacal.css" />
+    <!--<link rel="stylesheet" type="text/css" href="Content/mdp.css" />-->
 
+    <!-- Scripts
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.js"> </script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.11.1.js"> </script>
+    <script type="text/javascript" src="Scripts/jquery-ui.multidatespicker.js"> </script>-->
+    
 </head>
 <body>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
                    
             </asp:ContentPlaceHolder>
 
-    <script src="Scripts/jquery.yacal.js"></script>
+    
+    <!-- Scripts -->
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/jquery-1.10.2.min.js"></script>
 

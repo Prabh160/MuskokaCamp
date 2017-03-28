@@ -15,8 +15,11 @@ namespace MuskokaCamp
     public partial class payment
     {
         public int Id { get; set; }
-        public System.DateTime date { get; set; }
+        public string date { get; set; }
         public string amount { get; set; }
         public string payment_type { get; set; }
+        public int camperID { get; set; }
+    
+        public virtual camperProfile camperProfile { get; set; }
     }
 }

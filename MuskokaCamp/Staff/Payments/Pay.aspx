@@ -23,9 +23,9 @@
     <div class="col-md-12 content">
 
         <div class="col-md-12">
-            <div class="col-md-6 "><span class="lblstrong">Cameron, Maggie & Rachel</span></div>
-
+           <h1><asp:label id="familyName" runat="server" Text=""></asp:label></h1>
         </div>
+        <form runat="server">
 
         <!-- Table -->
         <table class="table">
@@ -35,18 +35,14 @@
             <th class="col-md-4 table-item table-header">DAYS OF ATTENDENCE</th>
 
             <tr>
-                <td class="col-md-4">Maggie Cameron</td>
-                <td class="col-md-4">$22.00</td>
-                <td class="col-md-4">12</td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">Maggie Cameron</td>
-                <td class="col-md-4">$22.00</td>
+                <td class="col-md-4"><asp:label runat="server" id="firstName" Text=""></asp:label></td>
+                <td class="col-md-4"><asp:label runat="server" id="rate" Text=""></asp:label></td>
                 <td class="col-md-4">12</td>
             </tr>
 
         </table>
+
+            <hr />
 
         <!-- Section 2 - Payments Tale -->
 
@@ -55,27 +51,14 @@
 
         </div>
 
-
-        <!-- Table -->
-        <table class="table">
-
-            <th class="col-md-4 table-item table-header">DATE</th>
-            <th class="col-md-4 table-item table-header">AMOUNT PAID</th>
-            <th class="col-md-4 table-item table-header">PAYMENT TYPE</th>
-
-            <tr>
-                <td class="col-md-4">July 13, 2016</td>
-                <td class="col-md-4">$200.00</td>
-                <td class="col-md-4">Credit Card</td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">July 13, 2016</td>
-                <td class="col-md-4">$200.00</td>
-                <td class="col-md-4">Credit Card</td>
-            </tr>
-
-        </table>
+            <asp:GridView ID="grdPayment" runat="server" cssClass="table table-bordered" autogeneratecolumns="false" DataKeyNames="camperID"> 
+                        <Columns>
+                            <asp:BoundField DataField="Id" HeaderText="ID" Visible="false" />
+                            <asp:BoundField DataField="date" HeaderText="DATE" HeaderStyle-CssClass="table-header" />
+                            <asp:BoundField DataField="amount"  HeaderText="AMOUNT" HeaderStyle-CssClass="table-header"/>
+                            <asp:BoundField DataField="payment_type"  HeaderText="PAYMENT TYPE" HeaderStyle-CssClass="table-header"/>
+                          </Columns>
+                </asp:GridView>
 
         <!-- SECTION 2 ENDS -->
         <!-- Section 3 Money Owes Start -->
@@ -92,6 +75,8 @@
             <div class="col-md-3"></div>
         </div>
 
+            <hr />
+
         <!-- Section 3 Money Owes End -->
         <!-- Section 3 Enter Payment Start -->
 
@@ -100,44 +85,45 @@
 
         </div>
 
+
+       
+
         <table class="table">
 
         <th class="col-md-4 table-item table-header">DATE</th>
-        <th class="col-md-4 table-item table-header">AMOUNT PAID</th>
+        <th class="col-md-4 table-item table-header">AMOUNT TO PAY</th>
         <th class="col-md-4 table-item table-header">PAYMENT TYPE</th>
 
-        
-
-
-
-        <form  runat="server" method="post">
-
+       
             <tr class="col-md-12 pay-section">
-
-                    <td class="yacal col-md-4 right-border-blue height-100" data-date="2017/3/02"></td>
-                
-                <td class="col-md-4 right-border-blue height-100">
-                    <label class="form-control">$ 110.00</label>
+                <td>
+                    <asp:Calendar ID="payCalendar" runat="server"></asp:Calendar>
+                </td>
+                <td class="col-md-4 right-border-blue height-100 table-item">
+                    <asp:TextBox ID="makePayment" runat="server"></asp:TextBox>
                 </td>
 
                     <td class="list-group col-md-4">
-                        <a href="#" class="list-group-item active">
-                            Credit Card
-                        </a>
-                        <a href="#" class="list-group-item">Debit</a>
-                        <a href="#" class="list-group-item">Cash</a>
-                        <a href="#" class="list-group-item">Cheque</a>
+     
+                        <asp:DropDownList ID="payType" CssClass="btn-banner table-item row-highlight" runat="server">
+                            <asp:ListItem Text="Credit Card" Value="Credit"></asp:ListItem>
+                            <asp:ListItem Text="Debit Card" Value="Debit"></asp:ListItem>
+                            <asp:ListItem Text="Cash" Value="Cash"></asp:ListItem>
+                            <asp:ListItem Text="Cheque" Value="Cheque"></asp:ListItem>
+                        </asp:DropDownList>
 
                     </td>
                 
             </tr>
              <tr>
                  <td class="input-name">
-                     <input type="submit" runat="server" value="Save & Submit" class="btn btn-primary btn-block" />
+                     <asp:Button ID="submitPayment" runat="server" CssClass="btn btn-primary btn-block" Text="Save & Submit" OnClick="submitPayment_Click" />
                  </td>
               </tr>
-        </form>
+        
             </table>
+        </form>
+            
 
 
         <div class="col-md-12">

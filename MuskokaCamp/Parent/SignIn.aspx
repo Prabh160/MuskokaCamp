@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="MuskokaCamp.Parent.SignIn" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-    <div class="header clearfix">
+    <div class="header clearfix wid-100">
 
         <div class="col-md-8 pull-left" id="header-left">
 

@@ -28,12 +28,14 @@
         </div>
 
          <asp:GridView ID="grdCampers" runat="server" cssClass="table table-bordered row-highlight" autogeneratecolumns="false" DataKeyNames="camperID"> 
-                        <Columns>
-                            <asp:BoundField DataField="camperID" HeaderText="ID" Visible="false" />
-                            <asp:BoundField DataField="familyName" HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
-                            <asp:BoundField DataField="firstName"  HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
-                         </Columns>
-                </asp:GridView>
+                <Columns>
+                    <asp:BoundField DataField="camperID"   HeaderText="ID" Visible="false" />
+                    <asp:BoundField DataField="familyName" HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
+                    <asp:BoundField DataField="firstName"  HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
+                    <asp:HyperLinkField HeaderText="PAYMENT RECORD" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn" Text="Pay" NavigateUrl="~/Staff/Payments/Pay.aspx" 
+                                DataNavigateUrlFields="camperID" DataNavigateUrlFormatString="~/Staff/Payments/Pay.aspx?camperID={0}" />
+                </Columns>
+          </asp:GridView>
 
     </div>
 </div>

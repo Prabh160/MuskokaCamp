@@ -32,7 +32,7 @@
                     <td class="col-md-4 table-header table-item input-name">LAST NAME</td>
                     <td rowspan="5" class="col-md-3">
                         <div class="profile-photo-icon">
-                            <asp:FileUpload ID="photo" name="photo" runat="server" />
+                            <img src="../../Images/create-profile-icon.png" height="200" width="200" />
                         </div>
                     </td>
                 </tr>
@@ -125,6 +125,24 @@
                     <td>REGISTERED DATES</td>
                 </tr>
 
+                <tr>
+              <td>  <section class="col-md-12 content">
+            <asp:Calendar ID="registerationCalendar" CssClass="col-md-4 col-xs-12 pull-left" runat="server"></asp:Calendar>
+            <asp:Calendar ID="registrationCalendar2" CssClass="col-md-4 col-xs-12 pull-right" runat="server"></asp:Calendar>
+           </section></td>
+                    </tr>
+
+              <!--  <tr>
+                 <td>
+                     <div class="box"  id="from--input">
+                       <input type="text" id="from-input">
+                      </div>      
+                      <div class="code-box">
+       
+                  </div>
+                     </td>
+                </tr> -->
+
             </table>
          
             <hr/>
@@ -145,5 +163,5 @@
 
     </div>
 </div>
-
+    <script>$('#from-input').multiDatesPicker();</script>
 </asp:Content>
