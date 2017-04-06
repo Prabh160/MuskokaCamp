@@ -21,13 +21,14 @@
           <Property Name="contactNumber" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="importantNotes" Type="varchar" MaxLength="8000" />
           <Property Name="photo" Type="varbinary" MaxLength="1" />
+          <Property Name="registeredDates" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="payment">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="date" Type="varchar" MaxLength="10" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="date" Type="varchar" MaxLength="20" />
           <Property Name="amount" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="payment_type" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="camperID" Type="int" Nullable="false" />
@@ -46,7 +47,7 @@
           <Property Name="signedOutBy" Type="varchar" MaxLength="255" />
           <Property Name="camperID" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__payment__camperI__6477ECF3">
+        <Association Name="FK__payment__camperI__6FE99F9F">
           <End Role="camperProfile" Type="Self.camperProfile" Multiplicity="1" />
           <End Role="payment" Type="Self.payment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -74,7 +75,7 @@
           <EntitySet Name="camperProfile" EntityType="Self.camperProfile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="payment" EntityType="Self.payment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="registrationDates" EntityType="Self.registrationDates" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__payment__camperI__6477ECF3" Association="Self.FK__payment__camperI__6477ECF3">
+          <AssociationSet Name="FK__payment__camperI__6FE99F9F" Association="Self.FK__payment__camperI__6FE99F9F">
             <End Role="camperProfile" EntitySet="camperProfile" />
             <End Role="payment" EntitySet="payment" />
           </AssociationSet>
@@ -105,13 +106,14 @@
           <Property Name="photo" Type="Binary" MaxLength="1" FixedLength="false" />
           <NavigationProperty Name="registrationDates" Relationship="Self.FK__registrat__campe__6383C8BA" FromRole="camperProfile" ToRole="registrationDates" />
           <NavigationProperty Name="payments" Relationship="muskokaModel.FK__payment__camperI__6477ECF3" FromRole="camperProfile" ToRole="payment" />
+          <Property Name="registeredDates" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="payment">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="date" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="date" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="payment_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="camperID" Type="Int32" Nullable="false" />
@@ -178,6 +180,7 @@
           <EntitySetMapping Name="camperProfiles">
             <EntityTypeMapping TypeName="muskokaModel.camperProfile">
               <MappingFragment StoreEntitySet="camperProfile">
+                <ScalarProperty Name="registeredDates" ColumnName="registeredDates" />
                 <ScalarProperty Name="camperID" ColumnName="camperID" />
                 <ScalarProperty Name="firstName" ColumnName="firstName" />
                 <ScalarProperty Name="lastName" ColumnName="lastName" />

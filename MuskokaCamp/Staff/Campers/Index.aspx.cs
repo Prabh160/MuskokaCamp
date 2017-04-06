@@ -14,12 +14,13 @@ namespace MuskokaCamp.Staff.Campers
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            getCampers();
+            if (!IsPostBack)
+            {
+                getCampers();
+            }
+            
         }
-        public override void VerifyRenderingInServerForm(Control control)
-        {
-            //base.VerifyRenderingInServerForm(control);
-        }
+
         protected void getCampers()
         {
             //connect to db
@@ -28,6 +29,7 @@ namespace MuskokaCamp.Staff.Campers
             //run the query using LINQ
             var Campers = from c in conn.camperProfiles
                           select c;
+
             //display the query results in grid view
             grdCampers.DataSource = Campers.ToList();
             grdCampers.DataBind();
@@ -40,20 +42,23 @@ namespace MuskokaCamp.Staff.Campers
             Int32 gridIndex = e.RowIndex;
 
             // 2. find the camper id value in the selected row
-            Int32 camperID = Convert.ToInt32(grdCampers.DataKeys[gridIndex].Value);
+            Int32 camperID = Convert.ToInt32(grdCampers.DataKeys[gridIndex].Values["camperID"]);
 
             // 3. connect to db
-            var conn = new muskokaEntities();
+            using (muskokaEntities db = new muskokaEntities())
+            { 
+            
+            camperProfile camp = (from c in db.camperProfiles
+                                  where c.camperID == camperID
+                                  select c).FirstOrDefault();
 
             // 4. delete the selected camper
-            camperProfile c = new camperProfile();
-            c.camperID = camperID;
-            conn.camperProfiles.Attach(c);
-            conn.camperProfiles.Remove(c);
-            conn.SaveChanges();
+            db.camperProfiles.Remove(camp);
+            db.SaveChanges();
 
             // 5. referesh the grid
             getCampers();
+            }
 
         }
     }

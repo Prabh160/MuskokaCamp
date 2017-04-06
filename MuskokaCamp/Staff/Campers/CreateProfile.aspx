@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateProfile.aspx.cs" Inherits="MuskokaCamp.Staff.Campers.CreateProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-    <div class="header clearfix">
+   <div class="header clearfix">
 
         <div class="col-md-8 pull-left" id="header-left">
 
@@ -14,10 +14,7 @@
             <div class="col-md-offset-2 col-md-5 header-caption right-border"><h5 class="text-muted">LOGGED IN AS:<h3 class="text-muted">STAFF</h3></h5></div>
             <div class="col-md-5 header-caption"><h4 class="text-muted"><img src="../../images/logout-icon.png"><a href="../../Default.aspx"> LOGOUT</a></h4></div>
 
-
         </div>
-
-
     </div>
 
     <div class="col-md-12 content">
@@ -53,7 +50,7 @@
 
                 <tr>
                     <td class="input-name">
-                        <asp:TextBox runat="server" placeholder="$00.00" name="rate" id="rate" class="table-item"></asp:TextBox>
+                        <asp:TextBox runat="server" placeholder="00.00" name="rate" id="rate" class="table-item"></asp:TextBox>
                     </td>
                     <td class="input-name">
                         <asp:TextBox runat="server" placeholder="Main Address Here" name="address" id="address" class="table-item"></asp:TextBox>
@@ -74,14 +71,14 @@
                     </td>
                 </tr>
 
-                <tr class="table-header">
+                <tr class="table-header col-md-12">
                     <td class="table-item emergency">
                         EMERGENCY
                     </td>
                     <td class="table-item">CONTACT</td>
                 </tr>
 
-                <tr>
+                <tr class="col-md-12">
                     <td class="input-name table-item emergency">
                         <label>Name:</label>
                     </td>
@@ -115,9 +112,9 @@
                     <td>IMPORTANT NOTES</td>
                 </tr>
 
-                <tr>
-                    <td class="col-md-12">
-                        <asp:TextBox runat="server" ID="impNotes" placeholder="Write any important notes !" CssClass="table-item textarea wid-100 col-md-12"></asp:TextBox>
+                <tr class="col-md-12">
+                    <td>
+                        <asp:TextBox runat="server" ID="impNotes" placeholder="Write any important notes !" CssClass="table-item"></asp:TextBox>
                     </td>
                 </tr>
 
@@ -126,30 +123,29 @@
                 </tr>
 
                 <tr>
-              <td>  <section class="col-md-12 content">
-            <asp:Calendar ID="registerationCalendar" CssClass="col-md-4 col-xs-12 pull-left" runat="server"></asp:Calendar>
-            <asp:Calendar ID="registrationCalendar2" CssClass="col-md-4 col-xs-12 pull-right" runat="server"></asp:Calendar>
-           </section></td>
-                    </tr>
+                  <td>  
+                      <section class="col-md-12 content">
+                         <asp:Calendar ID="registerationCalendar" TextMode="Date" OnDayRender="registerationCalendar_DayRender" OnSelectionChanged="registerationCalendar_SelectionChanged"  runat="server" CssClass="col-md-6 col-xs-12 table-striped" SelectionMode="DayWeekMonth"></asp:Calendar>
+                      </section>                      
+                  </td>
+               </tr>
 
-              <!--  <tr>
-                 <td>
-                     <div class="box"  id="from--input">
-                       <input type="text" id="from-input">
-                      </div>      
-                      <div class="code-box">
-       
-                  </div>
-                     </td>
-                </tr> -->
+                <hr />
 
-            </table>
+                <tr>
+                    <td>
+                         </td>
+                </tr>
          
             <hr/>
 
-            <p class="table row">
-                <asp:LinkButton runat="server" class="btn btn-primary pull-right" OnClick="Create_Click">Save Changes</asp:LinkButton>
-            </p>
+            <tr>
+                <td>
+                    <asp:LinkButton runat="server" class="btn btn-primary pull-right" OnClick="Create_Click">Save Changes</asp:LinkButton>
+                </td>
+            </tr>
+
+            </table>
 
             <hr />
 
@@ -160,8 +156,8 @@
             <a href="../Staff/StaffDashboard.aspx" class="btn btn-primary pull-right">Back to Staff Home</a>
         </div>
 
-
     </div>
-</div>
-    <script>$('#from-input').multiDatesPicker();</script>
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+      
 </asp:Content>

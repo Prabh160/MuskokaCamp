@@ -16,11 +16,35 @@
                     <asp:LinkButton href="Parent/SignIn.aspx"  runat="server" cssclass="btn btn-primary btn-banner">Parent / Guardian</asp:LinkButton>
                 </div>
                 <div class="col-md-6">
-                    <asp:LinkButton href="Staff/staffdashboard.aspx" runat="server" class="btn btn-primary btn-banner">Staff</asp:LinkButton>
+                    <!-- Trigger the modal with a button -->
+                      <asp:TextBox class="btn btn-primary btn-banner" runat="server" data-toggle="modal" data-target="#myModal">Staff</asp:TextBox>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+    
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-body">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <asp:Panel ID="passPanel" runat="server" DefaultButton="passwordSubmit">
+                                <asp:TextBox TextMode="password" ID="password" placeholder="Enter Your Password" UserSubmitBehavior="false" autofocus="true" runat="server" CssClass="table-item"></asp:TextBox>
+                              
+                                <hr />
+                                <asp:LinkButton ID="passwordSubmit" runat="server" OnClick="passwordSubmit_Click" CssClass="btn btn-primary">Submit</asp:LinkButton>                          
+                                </asp:Panel>
+                            </div>
+                          </div>
+      
+                        </div>
+                      </div>
                 </div>
             </div>
 
             <div class="col-md-4"></div>
      </div>
 </form>
+    <script>
+        
+    </script>
 </asp:Content>

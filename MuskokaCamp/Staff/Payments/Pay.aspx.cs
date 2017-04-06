@@ -14,11 +14,10 @@ namespace MuskokaCamp.Staff.Payments
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            getPayment();
-
+            
             if (IsPostBack == false)
             {
-
+                getPayment();
 
                 //check id so that we can edit or add
                 if (!String.IsNullOrEmpty(Request.QueryString["camperID"]))
@@ -57,11 +56,6 @@ namespace MuskokaCamp.Staff.Payments
 
             }
         }
-
-        public override void VerifyRenderingInServerForm(Control control)
-        {
-            //base.VerifyRenderingInServerForm(control);
-        }
         protected void getPayment()
         {
             //connect to db
@@ -71,44 +65,27 @@ namespace MuskokaCamp.Staff.Payments
 
         protected void submitPayment_Click(object sender, EventArgs e)
         {
-            if (IsPostBack == false)
-            {
+        
+            //connect to db
+            var db = new muskokaEntities();
 
-                //check id so that we can edit or add
-                if (!String.IsNullOrEmpty(Request.QueryString["camperID"]))
-                {
-                    //get id from URL
-                    Int32 camperID = Convert.ToInt32(Request.QueryString["camperID"]);
-
-                    // connect to db
-                    var conn = new muskokaEntities();
-
-                    //create a new payment
-                    payment pay = new payment();
-
-                    // look up for payments
-                    pay = (from p in conn.payments
-                           where p.camperID == camperID
-                           select p).FirstOrDefault();
-
+                // create new payment in the memory
+                payment pay = new payment();
+        
+          
                     //fill properties to make a payment
-                    pay.date = Convert.ToString(payCalendar.SelectedDate);
-                    pay.amount = makePayment.Text;
-                    pay.payment_type = payType.Text;
+                    pay.date = payCalendar.Text;
+                    pay.amount = "$" + makePayment.Text;
+                    pay.payment_type = payType.SelectedItem.Text;
+                    pay.camperID = Convert.ToInt32(Request.QueryString["camperID"]);
 
-                    //save the new object to the database
-                    
-                        pay.camperID = camperID;
-                        conn.payments.Attach(pay);
-                    
-
-                    conn.SaveChanges();
+            //save the new object to the database
+            db.payments.Add(pay);
+                        db.SaveChanges();
 
                     //redirect
                     Response.Redirect("Index.aspx");
-
-                }
+            
             }
         }
-    }
-}     
+    }   

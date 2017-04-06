@@ -17,23 +17,20 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="Content/custom.css" />
-    <!--<link rel="stylesheet" type="text/css" href="Content/mdp.css" />-->
+    <link rel="stylesheet" type="text/css" href="Content/jquery-ui.css"> 
 
-    <!-- Scripts
-    <script type="text/javascript" src="Scripts/jquery-2.1.1.js"> </script>
-    <script type="text/javascript" src="Scripts/jquery-ui-1.11.1.js"> </script>
-    <script type="text/javascript" src="Scripts/jquery-ui.multidatespicker.js"> </script>-->
+    <!-- Scripts -->
+    <script src="Scripts/jquery-3.2.0.min.js"></script> 
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
+    <script src="Scripts/jquery-ui-1.11.1.js"></script>  
+
     
 </head>
 <body>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
                    
             </asp:ContentPlaceHolder>
-
-    
-    <!-- Scripts -->
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/jquery-1.10.2.min.js"></script>
 
 </body>
 </html>

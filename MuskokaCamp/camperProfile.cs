@@ -33,6 +33,7 @@ namespace MuskokaCamp
         public string contactNumber { get; set; }
         public string importantNotes { get; set; }
         public byte[] photo { get; set; }
+        public string registeredDates { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<registrationDate> registrationDates { get; set; }

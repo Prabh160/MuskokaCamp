@@ -21,11 +21,12 @@
     </div>
 
     <div class="col-md-12 content">
+        <form runat="server" method="post">
 
         <div class="col-md-12">
            <h1><asp:label id="familyName" runat="server" Text=""></asp:label></h1>
         </div>
-        <form runat="server">
+        
 
         <!-- Table -->
         <table class="table">
@@ -75,7 +76,7 @@
             <div class="col-md-3"></div>
         </div>
 
-            <hr />
+           
 
         <!-- Section 3 Money Owes End -->
         <!-- Section 3 Enter Payment Start -->
@@ -97,27 +98,28 @@
        
             <tr class="col-md-12 pay-section">
                 <td>
-                    <asp:Calendar ID="payCalendar" runat="server"></asp:Calendar>
+                    <asp:TextBox TextMode="Date" ID="payCalendar" CssClass="table-item" runat="server"></asp:TextBox>
                 </td>
                 <td class="col-md-4 right-border-blue height-100 table-item">
-                    <asp:TextBox ID="makePayment" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="makePayment" CssClass="table-item" placeholder="00.00" runat="server"></asp:TextBox>
                 </td>
 
                     <td class="list-group col-md-4">
      
                         <asp:DropDownList ID="payType" CssClass="btn-banner table-item row-highlight" runat="server">
-                            <asp:ListItem Text="Credit Card" Value="Credit"></asp:ListItem>
-                            <asp:ListItem Text="Debit Card" Value="Debit"></asp:ListItem>
-                            <asp:ListItem Text="Cash" Value="Cash"></asp:ListItem>
-                            <asp:ListItem Text="Cheque" Value="Cheque"></asp:ListItem>
+                            <asp:ListItem Text="Credit Card" runat="server" Value="Credit"></asp:ListItem>
+                            <asp:ListItem Text="Debit Card" runat="server" Value="Debit"></asp:ListItem>
+                            <asp:ListItem Text="Cash" runat="server" Value="Cash"></asp:ListItem>
+                            <asp:ListItem Text="Cheque" runat="server" Value="Cheque"></asp:ListItem>
                         </asp:DropDownList>
 
                     </td>
                 
             </tr>
+
              <tr>
                  <td class="input-name">
-                     <asp:Button ID="submitPayment" runat="server" CssClass="btn btn-primary btn-block" Text="Save & Submit" OnClick="submitPayment_Click" />
+                     <asp:Button ID="submitPayment" runat="server" CssClass="btn btn-primary btn-block col-md-12" Text="Save & Submit" OnClick="submitPayment_Click" />
                  </td>
               </tr>
         

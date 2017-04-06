@@ -20,6 +20,7 @@
 
     </div>
 
+<form runat="server">
     <div class="col-md-12 content">
 
         <div class="col-md-12">
@@ -41,5 +42,6 @@
  
 
     </div>
+    </form>
 </div>
 </asp:Content>
