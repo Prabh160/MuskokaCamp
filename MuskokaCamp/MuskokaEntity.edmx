@@ -38,9 +38,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="day" Type="int" Nullable="false" />
-          <Property Name="month" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="year" Type="int" Nullable="false" />
+          <Property Name="date" Type="varchar" MaxLength="255" />
           <Property Name="signInTime" Type="varchar" MaxLength="255" />
           <Property Name="signOutTime" Type="varchar" MaxLength="255" />
           <Property Name="signedInBy" Type="varchar" MaxLength="255" />
@@ -59,7 +57,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__registrat__campe__6383C8BA">
+        <Association Name="FK__registrat__campe__02FC7413">
           <End Role="camperProfile" Type="Self.camperProfile" Multiplicity="1" />
           <End Role="registrationDates" Type="Self.registrationDates" Multiplicity="*" />
           <ReferentialConstraint>
@@ -79,7 +77,7 @@
             <End Role="camperProfile" EntitySet="camperProfile" />
             <End Role="payment" EntitySet="payment" />
           </AssociationSet>
-          <AssociationSet Name="FK__registrat__campe__6383C8BA" Association="Self.FK__registrat__campe__6383C8BA">
+          <AssociationSet Name="FK__registrat__campe__02FC7413" Association="Self.FK__registrat__campe__02FC7413">
             <End Role="camperProfile" EntitySet="camperProfile" />
             <End Role="registrationDates" EntitySet="registrationDates" />
           </AssociationSet>
@@ -124,15 +122,13 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="day" Type="Int32" Nullable="false" />
-          <Property Name="month" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="year" Type="Int32" Nullable="false" />
           <Property Name="signInTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="signOutTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="signedInBy" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="signedOutBy" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="camperID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="camperProfile" Relationship="Self.FK__registrat__campe__6383C8BA" FromRole="registrationDates" ToRole="camperProfile" />
+          <Property Name="date" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK__registrat__campe__6383C8BA">
           <End Role="camperProfile" Type="Self.camperProfile" Multiplicity="1" />
@@ -210,10 +206,8 @@
           <EntitySetMapping Name="registrationDates">
             <EntityTypeMapping TypeName="muskokaModel.registrationDate">
               <MappingFragment StoreEntitySet="registrationDates">
+                <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="day" ColumnName="day" />
-                <ScalarProperty Name="month" ColumnName="month" />
-                <ScalarProperty Name="year" ColumnName="year" />
                 <ScalarProperty Name="signInTime" ColumnName="signInTime" />
                 <ScalarProperty Name="signOutTime" ColumnName="signOutTime" />
                 <ScalarProperty Name="signedInBy" ColumnName="signedInBy" />

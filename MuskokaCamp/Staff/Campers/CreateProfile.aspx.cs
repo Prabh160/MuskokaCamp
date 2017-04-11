@@ -41,6 +41,7 @@ namespace MuskokaCamp.Staff.Campers
                     contactRelation.Text = objCamper.contactRelation;
                     contactNumber.Text = objCamper.contactNumber;
                     impNotes.Text = objCamper.importantNotes;
+                    datePick.Text = objCamper.registeredDates;
 
 
                 }
@@ -49,56 +50,10 @@ namespace MuskokaCamp.Staff.Campers
         }
 
 
-        protected void registerationCalendar_DayRender(object sender, DayRenderEventArgs e)
-        {
-            registerationCalendar.SelectedDates.Clear();
-
-            foreach (DateTime dt in MultipleSelectedDates)
-            {
-                registerationCalendar.SelectedDates.Add(dt);
-            }
-        }
-
-        protected void registerationCalendar_SelectionChanged(object sender, EventArgs e)
-        {
-
-            if (MultipleSelectedDates.Contains(registerationCalendar.SelectedDate))
-            {
-                MultipleSelectedDates.Remove(registerationCalendar.SelectedDate);
-            }
-            else
-            {
-                MultipleSelectedDates.Add(registerationCalendar.SelectedDate);
-            }
-
-            ViewState["MultipleSelectedDates"] = MultipleSelectedDates;
-        }
-
-        public List<DateTime> MultipleSelectedDates
-        {
-            get
-            {
-                if (ViewState["MultipleSelectedDates"] == null)
-
-                    ViewState["MultipleSelectedDates"] = new List<DateTime>();
-                return (List<DateTime>)ViewState["MultipleSelectedDates"];
-            }
-            set
-            {
-                ViewState["MultipleSelectedDates"] = value;
-            }
-        }
-
-
 
         protected void Create_Click(object sender, EventArgs e)
         {
-            foreach (DateTime dt in MultipleSelectedDates)
-            {
-                Label1.Text = Label1.Text + "<br/>" + dt.ToString("dd/MM/yyyy");
-            }
-
-            /*
+           
               // check if we have an ID for editing
               Int32 camperID = 0;
 
@@ -126,8 +81,8 @@ namespace MuskokaCamp.Staff.Campers
                   c.contactRelation = contactRelation.Text;
                   c.contactNumber = contactNumber.Text;
                   c.importantNotes = impNotes.Text;
+                  c.registeredDates = datePick.Text;
 
-          /*
           //save the new object to the database
           if (camperID == 0)
               {
@@ -143,8 +98,8 @@ namespace MuskokaCamp.Staff.Campers
               conn.SaveChanges();
 
               //redirect to the Index page
-              //Response.Redirect("Index.aspx");
-              */
+              Response.Redirect("Index.aspx");
+              
 
         }
 

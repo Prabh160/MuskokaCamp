@@ -124,20 +124,13 @@
 
                 <tr>
                   <td>  
-                      <section class="col-md-12 content">
-                         <asp:Calendar ID="registerationCalendar" TextMode="Date" OnDayRender="registerationCalendar_DayRender" OnSelectionChanged="registerationCalendar_SelectionChanged"  runat="server" CssClass="col-md-6 col-xs-12 table-striped" SelectionMode="DayWeekMonth"></asp:Calendar>
+                      <section class="col-md-12 content">  
+                          <asp:TextBox ID="datePick" ClientIDMode="Static" runat="server"></asp:TextBox>
                       </section>                      
                   </td>
                </tr>
 
                 <hr />
-
-                <tr>
-                    <td>
-                         </td>
-                </tr>
-         
-            <hr/>
 
             <tr>
                 <td>
@@ -157,7 +150,5 @@
         </div>
 
     </div>
-        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-        <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
-      
+    
 </asp:Content>

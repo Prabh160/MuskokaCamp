@@ -175,6 +175,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\calendar.css" />
     <Content Include="Content\custom.css" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.structure.css" />
@@ -223,6 +224,7 @@
       <DependentUpon>MuskokaEntity.edmx</DependentUpon>
       <LastGenOutput>MuskokaEntity.cs</LastGenOutput>
     </Content>
+    <Content Include="Parent\CamperAttendence.aspx" />
     <Content Include="Parent\SignedIn.aspx" />
     <Content Include="Parent\SignIn.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -268,6 +270,7 @@
     <Content Include="Staff\Campers\Index.aspx" />
     <Content Include="Staff\Payments\Index.aspx" />
     <Content Include="Staff\Payments\Pay.aspx" />
+    <Content Include="Staff\Registration\AddCamper.aspx" />
     <Content Include="Staff\Registration\Index.aspx" />
     <Content Include="Staff\Reports\AuthenticationReports.aspx" />
     <Content Include="Staff\Reports\DailyCamperSheets.aspx" />
@@ -443,6 +446,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MuskokaEntity.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Parent\CamperAttendence.aspx.cs">
+      <DependentUpon>CamperAttendence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parent\CamperAttendence.aspx.designer.cs">
+      <DependentUpon>CamperAttendence.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Parent\SignedIn.aspx.cs">
       <DependentUpon>SignedIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -505,6 +515,13 @@
     </Compile>
     <Compile Include="Staff\Payments\Pay.aspx.designer.cs">
       <DependentUpon>Pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Registration\AddCamper.aspx.cs">
+      <DependentUpon>AddCamper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Registration\AddCamper.aspx.designer.cs">
+      <DependentUpon>AddCamper.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\Registration\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

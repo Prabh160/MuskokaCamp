@@ -15,14 +15,12 @@ namespace MuskokaCamp
     public partial class registrationDate
     {
         public int ID { get; set; }
-        public int day { get; set; }
-        public string month { get; set; }
-        public int year { get; set; }
         public string signInTime { get; set; }
         public string signOutTime { get; set; }
         public string signedInBy { get; set; }
         public string signedOutBy { get; set; }
         public int camperID { get; set; }
+        public string date { get; set; }
     
         public virtual camperProfile camperProfile { get; set; }
     }

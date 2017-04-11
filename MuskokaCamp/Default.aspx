@@ -13,7 +13,7 @@
 
                 <div class="col-md-6 ">
                       
-                    <asp:LinkButton href="Parent/SignIn.aspx"  runat="server" cssclass="btn btn-primary btn-banner">Parent / Guardian</asp:LinkButton>
+                    <asp:LinkButton href="Parent/CamperAttendence.aspx"  runat="server" cssclass="btn btn-primary btn-banner">Parent / Guardian</asp:LinkButton>
                 </div>
                 <div class="col-md-6">
                     <!-- Trigger the modal with a button -->

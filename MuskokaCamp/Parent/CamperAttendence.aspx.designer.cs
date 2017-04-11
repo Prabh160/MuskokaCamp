@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MuskokaCamp.Staff.Registration {
+namespace MuskokaCamp.Parent {
     
     
-    public partial class Index {
+    public partial class CamperAttendence {
         
         /// <summary>
-        /// datePick control.
+        /// currentDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datePick;
+        protected global::System.Web.UI.WebControls.Label currentDate;
         
         /// <summary>
-        /// submitDate control.
+        /// currentDate2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submitDate;
+        protected global::System.Web.UI.WebControls.Label currentDate2;
         
         /// <summary>
-        /// grdRegistration control.
+        /// grdParents control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdRegistration;
+        protected global::System.Web.UI.WebControls.GridView grdParents;
     }
 }

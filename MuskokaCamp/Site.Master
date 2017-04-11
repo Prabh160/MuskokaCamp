@@ -18,12 +18,17 @@
     <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="Content/custom.css" />
     <link rel="stylesheet" type="text/css" href="Content/jquery-ui.css"> 
+    <link rel="stylesheet" type="text/css" href="Content/calendar.css">
+
 
     <!-- Scripts -->
     <script src="Scripts/jquery-3.2.0.min.js"></script> 
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
-    <script src="Scripts/jquery-ui-1.11.1.js"></script>  
+    <script src="Scripts/jquery-ui-1.11.1.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="http://multidatespickr.sourceforge.net/jquery-ui.multidatespicker.js"></script> 
 
     
 </head>
@@ -31,6 +36,12 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
                    
             </asp:ContentPlaceHolder>
+
+    <script>
+        $(document).ready(function() {
+            $("#datePick").multiDatesPicker();
+        });
+    </script>
 
 </body>
 </html>
