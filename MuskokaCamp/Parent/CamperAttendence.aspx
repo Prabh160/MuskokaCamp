@@ -24,27 +24,24 @@
 
 	  <div class="col-md-12 content">
 
-	  			<div class="col-md-12">
-				<div class="col-md-6 "><span class="lblstrong">Camper Attendance</span></div>
-	  			<div class="col-md-6">
-                    <span class="lblstrong">  
+	  			<div class="row">
+				<div class="col-md-6 col-sm-12 col-xs-12"><span class="lblstrong pull-left">Camper Attendance</span></div>
+	  			<div class="col-md-6 col-sm-12 col-xs-12">
+                    <span class="lblstrong pull-right">  
                       <asp:Label ID="currentDate" runat="server"></asp:Label> |
                       <asp:Label ID="currentDate2" runat="server"></asp:Label>
 	  			    </span>
 	  			</div>
 	  			</div>
-	  			<br/>
-	  			<br/>
-
 
 				  <!-- Gridview Table -->
-                      <asp:GridView ID="grdParents" runat="server" cssClass="table table-bordered row-highlight" autogeneratecolumns="false" > 
+                      <asp:GridView ID="grdParents" runat="server" cssClass="table table-bordered row-highlight table-responsive" autogeneratecolumns="false" > 
                         <Columns>
-                            <asp:BoundField DataField="camperID" HeaderText="ID" Visible="false" />
-                            <asp:BoundField DataField="familyName" HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
-                            <asp:BoundField DataField="firstName"  HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
-                            <asp:BoundField DataField="signInTime" HeaderText="SIGN IN" HeaderStyle-CssClass="table-header" />
-                            <asp:BoundField DataField="signOutTime"  HeaderText="SIGN OUT" HeaderStyle-CssClass="table-header"/>
+                            <asp:BoundField DataField="camperID"   HeaderText="ID" Visible="false" />
+                            <asp:BoundField DataField="familyName"  HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
+                            <asp:BoundField DataField="firstName"   HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
+                            <asp:BoundField DataField="signInTime"  HeaderText="SIGN IN TIME" HeaderStyle-CssClass="table-header" />
+                            <asp:BoundField DataField="signOutTime" HeaderText="SIGN OUT TIME" HeaderStyle-CssClass="table-header"/>
                         </Columns>
                 </asp:GridView>
 	        </div>

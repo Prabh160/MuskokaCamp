@@ -29,14 +29,14 @@
 
         </div>
   
-                <asp:GridView ID="grdCampers" runat="server" cssClass="table table-bordered row-highlight" autogeneratecolumns="false" DataKeyNames="camperID" OnRowDeleting="grdCampers_RowDeleting"> 
+                <asp:GridView ID="grdCampers" runat="server" cssClass="table table-bordered row-highlight table-responsive" autogeneratecolumns="false" DataKeyNames="camperID" OnRowDeleting="grdCampers_RowDeleting"> 
                         <Columns>
                             <asp:BoundField DataField="camperID" HeaderText="ID" Visible="false" />
                             <asp:BoundField DataField="familyName" HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
                             <asp:BoundField DataField="firstName"  HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
-                            <asp:HyperLinkField HeaderText="EDIT" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn" Text="Edit" NavigateUrl="~/Staff/Campers/CreateProfile.aspx" 
+                            <asp:HyperLinkField HeaderText="EDIT" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn btn-primary" Text="Edit" NavigateUrl="~/Staff/Campers/CreateProfile.aspx" 
                                 DataNavigateUrlFields="camperID" DataNavigateUrlFormatString="~/Staff/Campers/CreateProfile.aspx?camperID={0}" />
-                            <asp:CommandField HeaderText="DELETE" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn" ShowDeleteButton="true"/>
+                            <asp:CommandField HeaderText="DELETE" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn btn-danger" ShowDeleteButton="true"/>
                         </Columns>
                 </asp:GridView>
  

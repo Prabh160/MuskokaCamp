@@ -24,20 +24,24 @@
 
 
         <table class="col-md-12">
-            <th class="col-md-6 "><span class="lblstrong">Parent Sign IN/OUT Reports</span></th>
+            <tr>
+                <th class="col-md-6 "><span class="lblstrong">Parent Sign IN/OUT Reports</span></th>
+            </tr>
         </table>
 
-        <!-- Default panel contents -->
-        <div class="col-md-12 nopadd table-header">
-            <div class="nopadd table-item text-center">SELECT A DATE FOR REPORT</div>
-
-        </div>
-
         <form runat="server">
-        <section class="col-md-12 content">
-            <asp:Calendar ID="reportsCalendar" CssClass="col-md-5 pull-left" runat="server"></asp:Calendar>
-            <asp:Calendar ID="reportsCalendar2" CssClass="col-md-5 pull-right" runat="server"></asp:Calendar>
-           </section>
+            <!-- Gridview Table -->
+                      <asp:GridView ID="grdParents" runat="server" cssClass="table table-bordered row-highlight table-responsive" autogeneratecolumns="false" > 
+                        <Columns>
+                            <asp:BoundField DataField="camperID"   HeaderText="ID" Visible="false" />
+                            <asp:BoundField DataField="familyName"  HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
+                            <asp:BoundField DataField="firstName"   HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
+                            <asp:BoundField DataField="signInTime"  HeaderText="SIGN IN TIME" HeaderStyle-CssClass="table-header" />
+                            <asp:BoundField DataField="signOutTime" HeaderText="SIGN OUT TIME" HeaderStyle-CssClass="table-header"/>
+                            <asp:BoundField DataField="signedInBy"  HeaderText="SIGNED IN BY" HeaderStyle-CssClass="table-header" />
+                            <asp:BoundField DataField="signedOutBy" HeaderText="SIGNED OUT BY" HeaderStyle-CssClass="table-header"/>
+                        </Columns>
+                </asp:GridView>
         </form>
     </div>
 </div>

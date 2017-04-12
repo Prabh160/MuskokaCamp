@@ -26,8 +26,14 @@ namespace MuskokaCamp.Parent
         {
             using (muskokaEntities conn = new muskokaEntities())
             {
-                var query = from c in conn.camperProfiles.Include(c => c.registrationDates) select c;
-                grdParents.DataSource = query.ToList();
+                var camperDates = (from cp in conn.camperProfiles
+
+                            join r in conn.registrationDates on cp.camperID equals r.camperID
+
+                            select new { cp.camperID, cp.familyName, cp.firstName, r.signInTime, r.signOutTime, r.signedInBy, r.signedOutBy });
+
+                grdParents.DataSource = camperDates.ToList();
+
                 grdParents.DataBind();
             }
            

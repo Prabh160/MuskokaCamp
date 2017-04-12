@@ -14,10 +14,9 @@ namespace MuskokaCamp.Staff.Campers
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+            
                 getCampers();
-            }
+            
             
         }
 

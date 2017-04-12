@@ -12,6 +12,23 @@ namespace MuskokaCamp.Staff.Registration
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            getCampers();
+
+
+        }
+
+        protected void getCampers()
+        {
+            //connect to db
+            var conn = new muskokaEntities();
+
+            //run the query using LINQ
+            var Campers = from c in conn.camperProfiles
+                          select c;
+
+            //display the query results in grid view
+            grdRegistration.DataSource = Campers.ToList();
+            grdRegistration.DataBind();
         }
 
     }
