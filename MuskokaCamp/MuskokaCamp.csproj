@@ -268,6 +268,7 @@
     <Content Include="Site.Master" />
     <Content Include="Staff\Campers\CreateProfile.aspx" />
     <Content Include="Staff\Campers\Index.aspx" />
+    <Content Include="Staff\Campers\RegistrationDates.aspx" />
     <Content Include="Staff\Payments\Index.aspx" />
     <Content Include="Staff\Payments\Pay.aspx" />
     <Content Include="Staff\Registration\AddCamper.aspx" />
@@ -501,6 +502,13 @@
     </Compile>
     <Compile Include="Staff\Campers\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Campers\RegistrationDates.aspx.cs">
+      <DependentUpon>RegistrationDates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Campers\RegistrationDates.aspx.designer.cs">
+      <DependentUpon>RegistrationDates.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\Payments\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

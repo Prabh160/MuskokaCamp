@@ -21,14 +21,17 @@
     </div>
 
     <div class="col-md-12 content">
-
-        <div class="col-md-12">
-            <div class="col-md-6 "><span class="lblstrong">James Baren</span></div>
-            <div class="col-md-6"><span class="pull-right lblstrong">Feburary 27, 2017</span></div>
-        </div>
+	    <div class="row">
+	    <div class="col-md-6 col-sm-12 col-xs-12"><span class="lblstrong pull-left">Camper Attendance</span></div>
+	    <div class="col-md-6 col-sm-12 col-xs-12">
+            <span class="lblstrong pull-right">  
+                <asp:Label ID="currentDate" runat="server"></asp:Label> |
+                <asp:Label ID="currentDate2" runat="server"></asp:Label>
+	  	    </span>
+	    </div>
+	    </div>
         <br />
-        <br />
-
+       
 
         <!-- Default panel contents -->
         <table class="col-md-12 table-header">
@@ -38,21 +41,19 @@
         <div class="col-md-offset-3 padd-20 col-md-6">
             <form runat="server" class="form-inline">
                 <div class="form-group">
-                    <div class="col-md-6"><label for="exampleInputName2">Please Enter Your Name:</label></div>
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="James Baren" id="exampleInputName2"></div>
-                </div>
 
-                <div class="text-center padd-20">
-                    <a href="SignedIn.aspx" class="btn btn-theme btn-primary">Sign In</a>
-
+                    <div class="col-md-6">
+                        <asp:Label for="signedInBy" runat="server" Text="Please Enter Your Name:"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
+                        <asp:TextBox ID="signedInBy" CssClass="form-control" runat="server" />
+                   </div>
+                <div class="text-center">
+                    <asp:Button ID="signin" runat="server" class="btn btn-primary" Text="Sign In" OnClick="signin_Click" />
                 </div>
-            </form>
+              </div>
+             </form>
         </div>
-
-        <table class="col-md-12 table-header-grey">
-            <th class="col-md-3 table-item">Sign Out</th>
-            <th class="col-md-9 table-item pull-right">* Camper must be signed in to be able to sign them out.</th>
-        </table>
 
     </div>
 </div>

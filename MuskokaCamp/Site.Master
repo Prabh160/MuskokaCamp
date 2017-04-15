@@ -40,6 +40,10 @@
     <script>
         $(document).ready(function() {
             $("#datePick").multiDatesPicker();
+            $("#datebox1").datepicker();
+            $("#datebox2").datepicker();
+            $("#datebox3").datepicker();
+            $("#datebox4").datepicker();
         });
     </script>
 

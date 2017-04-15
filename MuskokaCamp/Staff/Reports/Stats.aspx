@@ -33,29 +33,34 @@
         </table>
 
         
-            <h4 class="margin-15 border-bottom-item stats-item camper-item">Number of camper profiles: 32</h4>
-
+            <h4 class="margin-15 border-bottom-item stats-item camper-item">Number of camper profiles: 
+                <asp:Label ID="totalCamper" runat="server" Text=""></asp:Label>
+            </h4>
+        <form runat="server">
         <div class="camper-item">
             <h4 class="stats-item ">Average Attendance Between</h4>
- 
-                <input type="button" runat="server" class="btn btn-primary btn-lg btn-theme-lg " name="create-profile" value="Signed In">
-                <span style="padding-left: 5px;padding-right: 5px;font-size: 20px;"> & </span>
-                <input type="button" runat="server" class="btn btn-primary btn-lg  btn-theme-lg " name="create-profile" value="Signed Out">
 
-             <h5 class="stats-item">AVERAGE CAMPERS: 0</h5>
+                <asp:TextBox ID="datebox1" ClientIDMode="Static" CssClass="table-item" placeholder="Select a Date" runat="server"></asp:TextBox>
+                <span style="padding-left: 5px;padding-right: 5px;font-size: 20px;"> & </span>
+                <asp:TextBox ID="datebox2" ClientIDMode="Static" CssClass="table-item" placeholder="Select a Date" runat="server"></asp:TextBox>
+
+            <asp:Button ID="Calculate1" runat="server" CssClass="btn btn-primary" Text="Calculate" OnClick="Calculate1_Click" />
+             <h5 class="stats-item">AVERAGE CAMPERS: <asp:Label ID="result1" runat="server" Text=""></asp:Label></h5>
 
          </div>
 
         <div class="camper-item">
              <h4 class="stats-item">Total Number of Campers Between</h4>
             
-                <input type="button" runat="server" class="btn btn-primary btn-lg btn-theme-lg " name="create-profile" value="Signed In">
+                <asp:TextBox ID="datebox3" ClientIDMode="Static" CssClass="table-item" placeholder="Select a Date" runat="server"></asp:TextBox>
                 <span class="separator"> & </span>
-                <input type="button" runat="server" class="btn btn-primary btn-lg  btn-theme-lg " name="create-profile" value="Signed Out">
+                <asp:TextBox ID="datebox4" ClientIDMode="Static" CssClass="table-item" placeholder="Select a Date" runat="server"></asp:TextBox>
 
-             <h5 class="stats-item">TOTAL CAMPERS: 0</h5>
+            <asp:Button ID="Calculate2" runat="server" Text="Calculate" CssClass="btn btn-primary" OnClick="Calculate2_Click" />
+             <h5 class="stats-item">TOTAL CAMPERS: <asp:Label ID="result2" runat="server" Text=""></asp:Label></h5>
 
         </div>
+        </form>
 
     </div>
 </div>

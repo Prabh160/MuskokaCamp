@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Softwares Project Files\Web Design\Sem 4\COMP 2083 - Web Project Studio\Assignments\Assignment 3\MuskokaCamp\MuskokaCamp\MuskokaEntity.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Bunny\Desktop\MuskokaCamp-master\MuskokaCamp\MuskokaEntity.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

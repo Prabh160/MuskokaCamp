@@ -21,7 +21,6 @@
           <Property Name="contactNumber" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="importantNotes" Type="varchar" MaxLength="8000" />
           <Property Name="photo" Type="varbinary" MaxLength="1" />
-          <Property Name="registeredDates" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="payment">
           <Key>
@@ -104,7 +103,6 @@
           <Property Name="photo" Type="Binary" MaxLength="1" FixedLength="false" />
           <NavigationProperty Name="registrationDates" Relationship="Self.FK__registrat__campe__6383C8BA" FromRole="camperProfile" ToRole="registrationDates" />
           <NavigationProperty Name="payments" Relationship="muskokaModel.FK__payment__camperI__6477ECF3" FromRole="camperProfile" ToRole="payment" />
-          <Property Name="registeredDates" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="payment">
           <Key>
@@ -176,7 +174,6 @@
           <EntitySetMapping Name="camperProfiles">
             <EntityTypeMapping TypeName="muskokaModel.camperProfile">
               <MappingFragment StoreEntitySet="camperProfile">
-                <ScalarProperty Name="registeredDates" ColumnName="registeredDates" />
                 <ScalarProperty Name="camperID" ColumnName="camperID" />
                 <ScalarProperty Name="firstName" ColumnName="firstName" />
                 <ScalarProperty Name="lastName" ColumnName="lastName" />

@@ -118,18 +118,6 @@
                     </td>
                 </tr>
 
-                <tr class="table-header table-item input-name">
-                    <td>REGISTERED DATES</td>
-                </tr>
-
-                <tr>
-                  <td>  
-                      <section class="col-md-12 content">  
-                          <asp:TextBox ID="datePick" ClientIDMode="Static" runat="server"></asp:TextBox>
-                      </section>                      
-                  </td>
-               </tr>
-
                 <hr />
 
             <tr>
@@ -144,11 +132,13 @@
 
         </form>
 
+
         <div class="col-md-12 back-btn-links">
             <a href="Index.aspx" class="btn btn-primary pull-left">Back to List of Profiles</a>
             <a href="../Staff/StaffDashboard.aspx" class="btn btn-primary pull-right">Back to Staff Home</a>
         </div>
 
     </div>
+        </div>
     
 </asp:Content>

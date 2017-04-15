@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MuskokaCamp.Staff.Registration {
+namespace MuskokaCamp.Staff.Campers {
     
     
-    public partial class AddCamper {
+    public partial class RegistrationDates {
         
         /// <summary>
-        /// datebox1 control.
+        /// datePick control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datebox1;
+        protected global::System.Web.UI.WebControls.TextBox datePick;
         
         /// <summary>
         /// grdRegistration control.

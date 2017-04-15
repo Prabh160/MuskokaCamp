@@ -34,26 +34,31 @@
         <hr />
 
         <section class="col-md-12 text-center">
-            <asp:TextBox ID="datePick" ClientIDMode="Static" CssClass="table-item" placeholder="Select a Date" runat="server"></asp:TextBox>        
-            <asp:Button ID="submitDate" CssClass="btn btn-primary" runat="server" Text="Next"/>
+            <asp:TextBox ID="datebox1" ClientIDMode="Static" CssClass="table-item" placeholder="Select a Date" runat="server"></asp:TextBox>        
+            <asp:Button ID="submitDate" CssClass="btn btn-primary" runat="server" Text="Next" OnClick="submitDate_Click"/>
         </section>
 
         <hr />
             
 	  			<div class="col-md-12">
 
-				<div class="col-md-6 "><span class="lblstrong pull-left">Monday, Feburary 27, 2017</span></div>
-				<div class="col-md-6"><input type="button" class="btn btn-primary btn-theme pull-right" name="create-profile" value="Add a Camper" /></div>
+				<div class="col-md-6 ">
+                    <span class="lblstrong pull-left"><asp:Label ID="date" runat="server" Text=""></asp:Label></span>
+
+				</div>
+				<div class="col-md-6">
+                    <asp:LinkButton ID="addcamper" runat="server" class="btn btn-primary btn-theme pull-right" Text="Add a Camper" href="~/Staff/Registration/AddCamper.aspx"  />
+				</div>
 
 	  			</div>
 	  	</div>
 
-                <asp:GridView ID="grdRegistration" runat="server" cssClass="table table-bordered row-highlight table-responsive " autogeneratecolumns="false" DataKeyNames="camperID"> 
+                <asp:GridView ID="grdRegistration" runat="server" cssClass="table table-bordered row-highlight table-responsive " autogeneratecolumns="false" DataKeyNames="camperID" OnRowDeleting="grdRegistration_RowDeleting" > 
                 <Columns>
-                    <asp:BoundField DataField="camperID"   HeaderText="ID" Visible="false" />
+                    <asp:BoundField DataField="camperID"   HeaderText="camperID" Visible="false" />
                     <asp:BoundField DataField="familyName" HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
                     <asp:BoundField DataField="firstName"  HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
-                    <asp:HyperLinkField HeaderText="REMOVE" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn btn-danger" Text="X" DataNavigateUrlFields="camperID" />
+                   <asp:CommandField HeaderText="Delete" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn btn-danger" ShowDeleteButton="true"/>
                 </Columns>
           </asp:GridView>
 

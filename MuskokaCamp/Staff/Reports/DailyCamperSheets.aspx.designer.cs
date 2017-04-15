@@ -13,21 +13,48 @@ namespace MuskokaCamp.Staff.Reports {
     public partial class DailyCamperSheets {
         
         /// <summary>
-        /// attendenceCalendar control.
+        /// datebox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar attendenceCalendar;
+        protected global::System.Web.UI.WebControls.TextBox datebox1;
         
         /// <summary>
-        /// attendenceCalendar2 control.
+        /// submitDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar attendenceCalendar2;
+        protected global::System.Web.UI.WebControls.Button submitDate;
+        
+        /// <summary>
+        /// rout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label rout;
+        
+        /// <summary>
+        /// date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label date;
+        
+        /// <summary>
+        /// grdRegistration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdRegistration;
     }
 }

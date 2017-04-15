@@ -15,6 +15,9 @@ namespace MuskokaCamp.Staff.Reports
         }
 
 
+        protected void submitDate_Click(object sender, EventArgs e)
+        {
+        }
         protected void Getparents()
         {
             using (muskokaEntities conn = new muskokaEntities())
@@ -23,7 +26,9 @@ namespace MuskokaCamp.Staff.Reports
 
                                    join r in conn.registrationDates on cp.camperID equals r.camperID
 
-                                   select new { cp.camperID, cp.familyName, cp.firstName, r.signInTime, r.signOutTime, r.signedInBy, r.signedOutBy });
+                                   where r.date == datebox1.Text
+
+                                   select new { cp.camperID, cp.familyName, cp.firstName, r.signInTime, r.signOutTime, r.signedInBy, r.signedOutBy, r.date });
 
                 grdParents.DataSource = camperDates.ToList();
 

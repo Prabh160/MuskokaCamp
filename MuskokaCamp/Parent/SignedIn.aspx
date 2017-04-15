@@ -21,26 +21,17 @@
     </div>
 
     <div class="col-md-12 content">
-
-        <div class="col-md-12">
-            <div class="col-md-6 "><span class="lblstrong">James Baren</span></div>
-            <div class="col-md-6"><span class="pull-right lblstrong">Feburary 27, 2017</span></div>
-        </div>
+	    <div class="row">
+	    <div class="col-md-6 col-sm-12 col-xs-12"><span class="lblstrong pull-left">Camper Attendance</span></div>
+	    <div class="col-md-6 col-sm-12 col-xs-12">
+            <span class="lblstrong pull-right">  
+                <asp:Label ID="currentDate" runat="server"></asp:Label> |
+                <asp:Label ID="currentDate2" runat="server"></asp:Label>
+	  	    </span>
+	    </div>
+	    </div>
         <br />
-        <br />
-
-        <table class="col-md-12 table-header-grey">
-            <th class="col-md-4 table-item">Signed In</th>
-        </table>
-
-
-        <div class="col-md-offset-3 padd-20 col-md-6">
-            <div class="form-group">
-                <div class="col-md-6"><label for="exampleInputName2">By: James Baren</label></div>
-                <div class="col-md-6"><label for="exampleInputName2">At: 6:43 am</label></div>
-
-            </div>
-        </div>
+       
 
         <!-- Default panel contents -->
         <table class="col-md-12 table-header">
@@ -50,12 +41,18 @@
         <div class="col-md-offset-3 padd-20 col-md-6">
             <form runat="server" class="form-inline">
                 <div class="form-group">
-                    <div class="col-md-6"><label for="exampleInputName2">Please Enter Your Name:</label></div>
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="James Baren" id="exampleInputName2"></div>
-                </div>
 
-                <div class="text-center padd-20"><a href="SignIn.aspx" class="btn btn-primary"> Sign Out</a></div>
-            </form>
+                    <div class="col-md-6">
+                        <asp:Label for="signedOutBy" runat="server" Text="Please Enter Your Name:"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
+                        <asp:TextBox ID="signedOutBy" CssClass="form-control" runat="server" />
+                   </div>
+                <div class="text-center">
+                    <asp:Button ID="signout" runat="server" class="btn btn-primary" Text="Sign Out" OnClick="signout_Click" />
+                </div>
+              </div>
+             </form>
         </div>
 
     </div>

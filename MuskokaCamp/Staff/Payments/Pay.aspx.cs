@@ -73,18 +73,18 @@ namespace MuskokaCamp.Staff.Payments
                 payment pay = new payment();
         
           
-                    //fill properties to make a payment
-                    pay.date = payCalendar.Text;
-                    pay.amount = "$" + makePayment.Text;
-                    pay.payment_type = payType.SelectedItem.Text;
-                    pay.camperID = Convert.ToInt32(Request.QueryString["camperID"]);
+                //fill properties to make a payment
+                pay.date = payCalendar.Text;
+                pay.amount = "$" + makePayment.Text;
+                pay.payment_type = payType.SelectedItem.Text;
+                pay.camperID = Convert.ToInt32(Request.QueryString["camperID"]);
 
-            //save the new object to the database
-            db.payments.Add(pay);
-                        db.SaveChanges();
+                //save the new object to the database
+                db.payments.Add(pay);
+                db.SaveChanges();
 
-                    //redirect
-                    Response.Redirect("Index.aspx");
+                //redirect
+                Response.Redirect("Index.aspx");
             
             }
         }

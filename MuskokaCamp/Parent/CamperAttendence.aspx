@@ -12,7 +12,7 @@
 	        <div class="col-md-4 pull-right">
 
 	        	<div class="col-md-offset-2 col-md-5 header-caption right-border"><h5 class="text-muted">LOGGED IN AS:<h3 class="text-muted">PARENT</h3></h5></div>
-	        	<div class="col-md-5 header-caption"><h4 class="text-muted"><img src="../../images/logout-icon.png"><a href="Default.aspx"> LOGOUT</a></h4></div>
+	        	<div class="col-md-5 header-caption"><h4 class="text-muted"><img src="../../images/logout-icon.png"><a href="../Default.aspx"> LOGOUT</a></h4></div>
 
 
 	        </div>
@@ -33,6 +33,7 @@
 	  			    </span>
 	  			</div>
 	  			</div>
+                <br />
 
 				  <!-- Gridview Table -->
                       <asp:GridView ID="grdParents" runat="server" cssClass="table table-bordered row-highlight table-responsive" autogeneratecolumns="false" > 
@@ -40,8 +41,10 @@
                             <asp:BoundField DataField="camperID"   HeaderText="ID" Visible="false" />
                             <asp:BoundField DataField="familyName"  HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
                             <asp:BoundField DataField="firstName"   HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
-                            <asp:BoundField DataField="signInTime"  HeaderText="SIGN IN TIME" HeaderStyle-CssClass="table-header" />
-                            <asp:BoundField DataField="signOutTime" HeaderText="SIGN OUT TIME" HeaderStyle-CssClass="table-header"/>
+                            <asp:HyperLinkField HeaderText="Sign In" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn btn-primary" Text="Sign In" NavigateUrl="~/Parent/SignIn.aspx" 
+                                DataNavigateUrlFields="camperID" DataNavigateUrlFormatString="~/Parent/SignIn.aspx?camperID={0}" />
+                            <asp:HyperLinkField HeaderText="Sign Out" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn btn-primary" Text="Sign Out" NavigateUrl="~/Staff/Campers/CreateProfile.aspx" 
+                                DataNavigateUrlFields="camperID" DataNavigateUrlFormatString="~/Parent/SignedIn.aspx?camperID={0}" />
                         </Columns>
                 </asp:GridView>
 	        </div>

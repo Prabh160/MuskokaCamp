@@ -13,6 +13,24 @@ namespace MuskokaCamp.Staff.Reports {
     public partial class AuthenticationReports {
         
         /// <summary>
+        /// datebox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox datebox1;
+        
+        /// <summary>
+        /// submitDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button submitDate;
+        
+        /// <summary>
         /// grdParents control.
         /// </summary>
         /// <remarks>

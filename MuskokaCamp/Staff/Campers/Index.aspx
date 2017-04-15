@@ -36,6 +36,8 @@
                             <asp:BoundField DataField="firstName"  HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
                             <asp:HyperLinkField HeaderText="EDIT" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn btn-primary" Text="Edit" NavigateUrl="~/Staff/Campers/CreateProfile.aspx" 
                                 DataNavigateUrlFields="camperID" DataNavigateUrlFormatString="~/Staff/Campers/CreateProfile.aspx?camperID={0}" />
+                            <asp:HyperLinkField HeaderText="Registration Dates" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn btn-primary" Text="Registration Dates" NavigateUrl="~/Staff/Campers/RegistrationDates.aspx" 
+                                DataNavigateUrlFields="camperID" DataNavigateUrlFormatString="~/Staff/Campers/RegistrationDates.aspx?camperID={0}" />
                             <asp:CommandField HeaderText="DELETE" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn btn-danger" ShowDeleteButton="true"/>
                         </Columns>
                 </asp:GridView>

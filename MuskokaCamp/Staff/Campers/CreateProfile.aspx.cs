@@ -41,7 +41,6 @@ namespace MuskokaCamp.Staff.Campers
                     contactRelation.Text = objCamper.contactRelation;
                     contactNumber.Text = objCamper.contactNumber;
                     impNotes.Text = objCamper.importantNotes;
-                    datePick.Text = objCamper.registeredDates;
 
 
                 }
@@ -81,7 +80,6 @@ namespace MuskokaCamp.Staff.Campers
                   c.contactRelation = contactRelation.Text;
                   c.contactNumber = contactNumber.Text;
                   c.importantNotes = impNotes.Text;
-                  c.registeredDates = datePick.Text;
 
           //save the new object to the database
           if (camperID == 0)
@@ -98,7 +96,7 @@ namespace MuskokaCamp.Staff.Campers
               conn.SaveChanges();
 
               //redirect to the Index page
-              Response.Redirect("Index.aspx");
+              Response.Redirect("Index.aspx?");
               
 
         }

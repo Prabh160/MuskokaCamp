@@ -31,5 +31,26 @@ namespace MuskokaCamp.Staff.Registration
             grdRegistration.DataSource = Campers.ToList();
             grdRegistration.DataBind();
         }
+
+        protected void grdRegistration_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow SelectedRow = grdRegistration.SelectedRow;
+            string id = SelectedRow.Cells[0].Text;
+        }
+
+        protected void grdRegistration_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(grdRegistration, "Select$" + e.Row.RowIndex);
+                e.Row.Attributes["style"] = "cursor:pointer";
+            }
+        }
+      
+
+        protected void grdRegistration_SelectedIndex(object sender, EventArgs e)
+        {
+
+        }
     }
 }

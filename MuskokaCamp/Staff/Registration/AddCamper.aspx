@@ -23,10 +23,15 @@
 	  <div class="col-md-12 content">
 
 	  			<div class="col-md-12">
-				<div class="col-md-6 "><span class="lblstrong">Monday, Feburary 27, 2017</span></div>
-				<div class="col-md-6 pull-right"><input type="button" class="btn btn-primary btn-theme" name="create-profile" value="Add a Camper" /></div>
+				<div class="col-md-6 ">
+                    <span class="lblstrong"></span>
+				</div>
+
 
 	  			</div>
+         <section class="col-md-12 text-center">
+            <asp:TextBox ID="datebox1" ClientIDMode="Static" CssClass="table-item" placeholder="Select a Date" runat="server"></asp:TextBox>        
+        </section>
 
 
 
@@ -35,12 +40,11 @@
 	  			 </div>
 
 				
-                   <asp:GridView ID="grdRegistration" runat="server" cssClass="table table-bordered row-highlight" autogeneratecolumns="false" DataKeyNames="camperID"> 
+         <asp:GridView ID="grdRegistration" runat="server" cssClass="table table-bordered row-highlight" autogeneratecolumns="false" DataKeyNames="camperID" OnRowDataBound="grdRegistration_RowDataBound" OnSelectedIndexChanged="grdRegistration_SelectedIndex"> 
                 <Columns>
                     <asp:BoundField DataField="camperID"   HeaderText="ID" Visible="false" />
                     <asp:BoundField DataField="familyName" HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
                     <asp:BoundField DataField="firstName"  HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
-                    <asp:HyperLinkField HeaderText="REMOVE" HeaderStyle-CssClass="table-header" ControlStyle-CssClass="btn" Text="X" DataNavigateUrlFields="camperID" />
                 </Columns>
           </asp:GridView>
 				    

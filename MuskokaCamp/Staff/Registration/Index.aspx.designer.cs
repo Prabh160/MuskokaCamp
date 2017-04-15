@@ -13,13 +13,13 @@ namespace MuskokaCamp.Staff.Registration {
     public partial class Index {
         
         /// <summary>
-        /// datePick control.
+        /// datebox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datePick;
+        protected global::System.Web.UI.WebControls.TextBox datebox1;
         
         /// <summary>
         /// submitDate control.
@@ -29,6 +29,24 @@ namespace MuskokaCamp.Staff.Registration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submitDate;
+        
+        /// <summary>
+        /// date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label date;
+        
+        /// <summary>
+        /// addcamper control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton addcamper;
         
         /// <summary>
         /// grdRegistration control.

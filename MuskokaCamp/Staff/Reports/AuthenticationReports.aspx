@@ -21,6 +21,14 @@
     </div>
 
     <div class="col-md-offset-1 col-md-10 content">
+                <hr />
+      <form runat="server">
+        <section class="col-md-12 text-center">
+            <asp:TextBox ID="datebox1" ClientIDMode="Static" CssClass="table-item" placeholder="Select a Date" runat="server"></asp:TextBox>        
+            <asp:Button ID="submitDate" CssClass="btn btn-primary" runat="server" Text="Next" OnClick="submitDate_Click"/>
+        </section>
+
+        <hr />
 
 
         <table class="col-md-12">
@@ -29,13 +37,14 @@
             </tr>
         </table>
 
-        <form runat="server">
+
             <!-- Gridview Table -->
                       <asp:GridView ID="grdParents" runat="server" cssClass="table table-bordered row-highlight table-responsive" autogeneratecolumns="false" > 
                         <Columns>
                             <asp:BoundField DataField="camperID"   HeaderText="ID" Visible="false" />
                             <asp:BoundField DataField="familyName"  HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
                             <asp:BoundField DataField="firstName"   HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
+                            <asp:BoundField DataField="date" HeaderText="Date" HeaderStyle-CssClass="table-header" />
                             <asp:BoundField DataField="signInTime"  HeaderText="SIGN IN TIME" HeaderStyle-CssClass="table-header" />
                             <asp:BoundField DataField="signOutTime" HeaderText="SIGN OUT TIME" HeaderStyle-CssClass="table-header"/>
                             <asp:BoundField DataField="signedInBy"  HeaderText="SIGNED IN BY" HeaderStyle-CssClass="table-header" />

@@ -27,17 +27,45 @@
             <th class="col-md-6 "><span class="lblstrong">Daily Camper Sheets</span></th>
         </table>
 
+                <form runat="server">
+
+    <div class="col-md-offset-1 col-md-10 content">
+
         <!-- Default panel contents -->
-        <div class="col-md-12 nopadd table-header">
-            <div class="nopadd table-item text-center">SELECT A DATE FOR ATTENDANCE SHEET</div>
+        <table class="col-md-12 table-header">
+            <tr>
+                <th class="table-item input-name">SELECT A DATE TO Camper Attendence</th>
+            </tr>
+        </table>
 
-        </div>
+        <hr />
 
-        <form runat="server">
-        <section class="col-md-12 content">
-            <asp:Calendar ID="attendenceCalendar" CssClass="col-md-5 pull-left" runat="server"></asp:Calendar>
-            <asp:Calendar ID="attendenceCalendar2" CssClass="col-md-5 pull-right" runat="server"></asp:Calendar>
-           </section>
+        <section class="col-md-12 text-center">
+            <asp:TextBox ID="datebox1" ClientIDMode="Static" CssClass="table-item" placeholder="Select a Date" runat="server"></asp:TextBox>        
+            <asp:Button ID="submitDate" CssClass="btn btn-primary" runat="server" Text="Select" OnClick="submitDate_Click"/>
+        </section>
+        <asp:Label ID="rout" runat="server" Text=""></asp:Label>
+
+        <hr />
+            
+	  			<div class="col-md-12">
+
+				<div class="col-md-6 ">
+                    <span class="lblstrong pull-left"><asp:Label ID="date" runat="server" Text=""></asp:Label></span>
+
+				</div>
+
+	  			</div>
+	  	</div>
+
+                <asp:GridView ID="grdRegistration" runat="server" cssClass="table table-bordered row-highlight table-responsive " autogeneratecolumns="false" DataKeyNames="camperID" > 
+                <Columns>
+                    <asp:BoundField DataField="camperID"   HeaderText="camperID" Visible="false" />
+                    <asp:BoundField DataField="familyName" HeaderText="FAMILY NAME" HeaderStyle-CssClass="table-header" />
+                    <asp:BoundField DataField="firstName"  HeaderText="CAMPER NAME" HeaderStyle-CssClass="table-header"/>
+                </Columns>
+          </asp:GridView>
+
         </form>
     </div>
 </div>
